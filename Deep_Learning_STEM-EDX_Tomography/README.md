@@ -1,7 +1,7 @@
 # Deep learning STEM-EDX tomography of nanocrystals
 
 We provide tensorflow(python) and matlab implementations of **Deep learning STEM-EDX tomography
-of nanocrystals. This code was written by **Yoseob Han** and **Eunju Cha**.
+of nanocrystals. This code was written by **Eunju Cha** and **Yoseob Han**.
 
 
 ### Datasets
@@ -106,10 +106,10 @@ the package has been tested on the following systems and drivers
 The above python script is the main file to be executed for both training and testing of
 Denoising CNN. Training and testing of the model can be done with
 ```
-#### Train Denoise CNN
+# Train Denoise CNN
 ./DenoiseCNN_train.sh
 
-#### Test Denoise CNN
+# Test Denoise CNN
 ./DenoiseCNN_test.sh
 ```
 
