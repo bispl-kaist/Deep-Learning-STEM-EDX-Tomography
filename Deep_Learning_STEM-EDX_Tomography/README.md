@@ -102,10 +102,10 @@ the package has been tested on the following systems and drivers
 ```
 ./install.m
 ```
-Run the matlab script for downloading pretrained networks such as **Denoising CNN** and **Super-resolution CNN**. 
+Run the matlab script for downloading pretrained networks such as **Denoising network** and **Projection Enhancement network**. 
 
 
-**2) Denoising CNN**
+**2) Denoising network**
 ```
 ./data_preparation/make_testing_data_denoising.m
 ```
@@ -115,7 +115,7 @@ Run the matlab script is to make the testing data.
 /Denoise_CNN/main.py
 ```
 The above python script is the main file to be executed for both training and testing of
-Denoising CNN. Training and testing of the model can be done with
+Denoising network. Training and testing of the model can be done with
 ```
 # Train Denoise CNN
 ./DenoiseCNN_train.sh
@@ -137,12 +137,12 @@ method. Upon running the code you will make both 3D-reconstructed data and its p
 
 **Inference time:** About 300 sec / object
 
-**4) Super-Resolution CNN**
+**4) Projection Enhancement network**
 ```
 ./SR_CNN/main.py
 ```
-Similar to denoising CNN, this is the main file to be executed for both training and testing of
-Super resolution CNN. Training and testing of the model can be done with
+Similar to denoising network, this is the main file to be executed for both training and testing of
+Projection Enhancement network. Training and testing of the model can be done with
 ```
 # Train SR CNN
 ./SRNN_train.sh
