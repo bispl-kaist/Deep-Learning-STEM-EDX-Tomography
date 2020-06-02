@@ -187,7 +187,7 @@ The analysis software is tested on Windows operating systems. The developmental 
 
 **1) 2D Projection Data**
 
-'''
+```
 #Generated 2-D maps for SQD1-1
 
 8_spherical_projection_particle_1_s_se_zn_zn(se)_zn(s)_inter_linear_step_1_thr_0.003.mat
@@ -203,22 +203,29 @@ The analysis software is tested on Windows operating systems. The developmental 
 #Generated 2-D maps for SQD2-2
 
 12_spherical_projection_particle_2_rot_70_s_se_zn_zn(se)_zn(s)_inter_linear_step_1_thr_0.003.mat
-'''
+```
  
 The variables of thickness_xx_mod are finally compensated 2D maps for each elements.
 
 
 **2) Display code**
 
-'''
+```
 #Display thickness maps and histograms for SQD1-1
+
 ./Analysis/display code for SQD1_1.m
+
 #Display thickness maps and histograms for SQD1-2
+
 ./Analysis/display code for SQD1_2.m
+
 #Display thickness maps and histograms for SQD2-1
+
 ./Analysis/display code for SQD2_1.m
+
 #Display thickness maps and histograms for SQD2-2
+
 ./Analysis/display code for SQD2_2.m
-'''
+```
 
 Run the above matlab scripts for reproducing the Supplementary Figures S17-20 and Supplementary Table S1 in the paper. 
