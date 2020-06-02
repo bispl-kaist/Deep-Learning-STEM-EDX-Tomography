@@ -6,6 +6,10 @@ lst_dir = lst_dir(3:end);
 
 input_dir = '../Denoise_CNN/data/denoising/test/';
 
+if ~isdir(input_dir)
+    mkdir(input_dir)
+end
+
 for idir = 1:length(lst_dir)
     data_dir = lst_dir(idir).name;
     
