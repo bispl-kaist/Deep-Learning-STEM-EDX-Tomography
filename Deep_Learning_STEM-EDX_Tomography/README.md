@@ -168,3 +168,7 @@ Run the matlab script for executing FBP to reconstruct final result.
 ./run_fig4b.m
 ```
 Run the above matlab scripts for reproducing the **figure. 4(a)** and **4(b)** in the paper.
+
+---
+
+# Analysis part
