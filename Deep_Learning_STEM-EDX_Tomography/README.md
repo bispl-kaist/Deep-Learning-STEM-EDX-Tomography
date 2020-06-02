@@ -77,6 +77,7 @@ This is the main file to be executed for both training and testing of attention 
 ```
 Specific options including load/save directions can be modified inside bash scripts.
 
+---
 
 Second part of our work for **3D tomography** consists mainly of two parts - **Denoising CNN** and **Super-resolution CNN**.
 We provide both training and inference codes for these deep neural networks, respectively.
@@ -96,12 +97,23 @@ the package has been tested on the following systems and drivers
 - Linux 18.04
 - CUDA 10.1
 
-### Getting started
+### Getting started (Test)
 
-**1) Denoising CNN**
+**1) Download the pretrained networks**
+```
+./install.m
+```
+Run the matlab script for downloading pretrained networks such as **Denoising CNN** and **Super-resolution CNN**. 
+
+
+**2) Denoising CNN**
+```
+./data_preparation/make_testing_data_denoising.m
+```
+Run the matlab script is to make the testing data.
 
 ```
-/Denoise_CNN/main_sait.py
+/Denoise_CNN/main.py
 ```
 The above python script is the main file to be executed for both training and testing of
 Denoising CNN. Training and testing of the model can be done with
@@ -115,36 +127,45 @@ Denoising CNN. Training and testing of the model can be done with
 
 Specific options including load/save directions can be modified inside bash scripts.
 
-**2) Model-based iterative reconstruction**
+**Inference time:** About 0.35 sec / slice
+
+**3) Model-Based Iterative Reconstruction (MBIR)**
 ```
-MIBR.m
+./MBIR_METHOD/main.m
 ```
-Run the matlab script for executing model-based iterative reconstruction with conjugate gradient
+Run the matlab script for executing model-based iterative reconstruction with conjugate gradient (CG)
 method. Upon running the code you will make both 3D-reconstructed data and its projection data.
 
-**3) Projection**
-```
-./data_preparation/Make_projection_db_seperate.m
-./data_preparation/Make_projection_db_structured.m
-```
-Use either one of the scripts to create data for training/testing Super-resolution.
-The former will save each files seperately, whereas the latter will save all the data into one
-structured one.
+**Inference time:** About 300 sec / object
 
-**4) Super-resolution CNN**
+**4) Super-Resolution CNN**
 ```
-./SR_CNN/main_sait.py
+./SR_CNN/main.py
 ```
 Similar to denoising CNN, this is the main file to be executed for both training and testing of
-Denoising CNN. Training and testing of the model can be done with
+Super resolution CNN. Training and testing of the model can be done with
 ```
-# Train Denoise CNN
-./DenoiseCNN_train.sh
+# Train SR CNN
+./SRNN_train.sh
 
-# Test Denoise CNN
-./DenoiseCNN_test.sh
+# Test SR CNN
+./SRCNN_test.sh
 ```
 Options including load/save directions can be modified inside bash scripts.
 
+**Inference time:** About 0.35 sec / slice
 
+**5) Analytic Reconstruction using Filtered Back-Projection (FBP)**
+```
+./main.m
+```
+Run the matlab script for executing FBP to reconstruct final result. 
 
+**Inference time:** About 3.55 sec / object
+
+**6) Reproduce Figure. 4(a) and 4(b)**
+```
+./run_fig4a.m
+./run_fig4b.m
+```
+Run the above matlab scripts for reproducing the **figure. 4(a)** and **4(b)** in the paper.

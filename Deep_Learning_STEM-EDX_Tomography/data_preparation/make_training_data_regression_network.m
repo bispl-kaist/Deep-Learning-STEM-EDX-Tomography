@@ -51,11 +51,11 @@ for ilst = 1:length(lst_SAIT)
         clear edx_img;
         
         edx_img     = mean(Si_img_reg(:,:,ind_set(ind)), 3);
-        save(['regression_data\2nd_atom\Input\' replace(lst_SAIT(ilst).name, '.mat', [ '_' int2str(irand) '_si.mat'])]], 'edx_img' , '-v6');
+        save(['regression_data\2nd_atom\Input\' replace(lst_SAIT(ilst).name, '.mat', [ '_' int2str(irand) '_si.mat'])], 'edx_img' , '-v6');
         clear edx_img;
         
         edx_img     = mean(Zni_img_reg(:,:,ind_set(ind)), 3);
-        save(['regression_data\3rd_atom\Input\' replace(lst_SAIT(ilst).name, '.mat', [ '_' int2str(irand) '_zni.mat'])]], 'edx_img' , '-v6');
+        save(['regression_data\3rd_atom\Input\' replace(lst_SAIT(ilst).name, '.mat', [ '_' int2str(irand) '_zni.mat'])], 'edx_img' , '-v6');
         
         edx_img     = cat(3, sei_img, edx_img); % concatenation of se and zn for training of s
         save(['regression_data\2nd_atom\Input_concat\' lst_SAIT(ilst).name(1:end-4) '_' int2str(irand) '_si.mat'], 'edx_img' , '-v6');  

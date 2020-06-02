@@ -69,7 +69,7 @@ class Models:
     '''
     SELECT NETWORK STRUCTURE such as RES-NET and U-NET
     '''
-    def get_network(self, input, training, network_type='unet', reuse=tf.compat.v1.AUTO_REUSE, name='unet'):
+    def get_network(self, input, training, network_type='unet', reuse=tf.AUTO_REUSE, name='unet'):
         with tf.variable_scope(name, reuse=reuse):
             if network_type == 'unet':
                 output = self.get_unet(input=input, training=training)
