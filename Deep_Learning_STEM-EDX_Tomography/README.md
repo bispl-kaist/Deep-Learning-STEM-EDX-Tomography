@@ -37,7 +37,6 @@ the package has been tested on the following systems and drivers
 
 ```
 ./data_preparation/make_training_data_regression_network.m
-
 ```
 Run the matlab script is to make the training data for regression network by exploiting bootstrap subsampling.
 
