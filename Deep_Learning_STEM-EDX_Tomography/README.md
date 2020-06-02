@@ -1,7 +1,7 @@
 # Deep learning STEM-EDX tomography of nanocrystals
 
 We provide tensorflow(python) and matlab implementations of **Deep learning STEM-EDX tomography
-of nanocrystals. This code was written by **Eunju Cha** and **Yoseob Han**.
+of nanocrystals**. This code was written by **Eunju Cha** and **Yoseob Han**.
 
 
 ### Datasets
