@@ -172,3 +172,53 @@ Run the above matlab scripts for reproducing the **figure. 4(a)** and **4(b)** i
 ---
 
 # Analysis part
+Last part of our work for 3D tomography. We provide easy analysis method for 3D reconstruction results. Each reconstruction data of nano-particles (quantum dot) has information on 3 elements (S, Se, Zn), and all of them are mapped in 2D maps using Cartesian to Spherical transformation, and then we compensate distortion along longitude direction with Matlab. It is similar with Mollweide projection of pseudocylindrical map projection.
+
+
+### Prerequisites
+- Matlab >= R2019b
+
+### Environments
+The analysis software is tested on Windows operating systems. The developmental version of the package has been tested on the following systems and drivers
+
+- Windows 10 64bit
+
+### Getting started
+
+**1) 2D Projection Data**
+
+'''
+#Generated 2-D maps for SQD1-1
+
+8_spherical_projection_particle_1_s_se_zn_zn(se)_zn(s)_inter_linear_step_1_thr_0.003.mat
+
+#Generated 2-D maps for SQD1-2
+
+8_spherical_projection_particle_2_s_se_zn_zn(se)_zn(s)_inter_linear_step_1_thr_0.003.mat
+
+#Generated 2-D maps for SQD2-1
+
+12_spherical_projection_particle_1_s_se_zn_zn(se)_zn(s)_inter_linear_step_1_thr_0.003.mat
+
+#Generated 2-D maps for SQD2-2
+
+12_spherical_projection_particle_2_rot_70_s_se_zn_zn(se)_zn(s)_inter_linear_step_1_thr_0.003.mat
+'''
+ 
+The variables of thickness_xx_mod are finally compensated 2D maps for each elements.
+
+
+**2) Display code**
+
+'''
+#Display thickness maps and histograms for SQD1-1
+./Analysis/display code for SQD1_1.m
+#Display thickness maps and histograms for SQD1-2
+./Analysis/display code for SQD1_2.m
+#Display thickness maps and histograms for SQD2-1
+./Analysis/display code for SQD2_1.m
+#Display thickness maps and histograms for SQD2-2
+./Analysis/display code for SQD2_2.m
+'''
+
+Run the above matlab scripts for reproducing the Supplementary Figures S17-20 and Supplementary Table S1 in the paper. 
