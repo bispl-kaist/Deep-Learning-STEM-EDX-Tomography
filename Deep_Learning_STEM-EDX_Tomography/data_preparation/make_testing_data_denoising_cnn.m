@@ -13,6 +13,6 @@ end
 for idir = 1:length(lst_dir)
     data_dir = lst_dir(idir).name;
     
-    copyfile([root_dir data_dir './input_*.mat'], input_dir);
+    copyfile([root_dir data_dir '/input_*.mat'], input_dir);
     
 end
