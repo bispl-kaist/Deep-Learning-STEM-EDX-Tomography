@@ -229,3 +229,9 @@ The variables of thickness_xx_mod are finally compensated 2D maps for each eleme
 ```
 
 Run the above matlab scripts for reproducing the Supplementary Figures S17-20 and Supplementary Table S1 in the paper. 
+
+---
+
+# 3D Reconstruction Data
+
+We provide reconstruction results of all cQD, sQD1, sQD2 shown in the manuscript in ```.raw``` file format so that it is possible for the interested readers to inspect the data on their own. All the data are contained in the folder ```./Recon_data```, with size ```140 x 140 x 256``` with ```uint16``` precision. 
