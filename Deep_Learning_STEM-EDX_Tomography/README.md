@@ -1,7 +1,7 @@
 # Deep learning STEM-EDX tomography of nanocrystals
 
 We provide tensorflow(python) and matlab implementations of **Deep learning STEM-EDX tomography
-of nanocrystals**. This code was written by **Eunju Cha** and **Yoseob Han**.
+of nanocrystals**. This code was written by **Eunju Cha**,**Yoseob Han**, and **Hyungjin Chung**.
 
 
 ### Datasets
@@ -168,6 +168,54 @@ Run the matlab script for executing FBP to reconstruct final result.
 ./run_fig4b.m
 ```
 Run the above matlab scripts for reproducing the **figure. 4(a)** and **4(b)** in the paper.
+
+---
+### End-to-End Learning
+
+Third part of our work for **3D tomography** is end-to-end learning which uses the results that are generated
+from the previous step. This part is given to show that our unsupervised learning method can both serve as a direct reconstruction method
+and a label generation step for end-to-end training which enables fast inference.
+End-to-end learning was implemented with PyTorch, and the data preparation code is written in matlab.
+
+### Prerequisites
+- pytorch >= 1.1.0
+- tensorflow >= 2.1.0 (Only for use in visualization. Not mandatory for inference)
+- tqdm
+- numpy == 1.17.0
+- pillow == 6.1.0
+
+Exhaustive list of requirements is provided in ```requirements.txt```, and can be installed in the conda environment using the following commands
+
+```
+conda create --name <env> --file requirements.txt
+```
+
+### Environments
+The package development version is tested on Linux operating systems. The developmental version of
+the package has been tested on the following systems and drivers
+
+- Linux 18.04
+- CUDA 10.0
+
+### Testing
+**1) Preparing data**
+```
+./end-to-end/process_data.m
+```
+In the above matlab code, be sure to specify which of the data that you would like to prepare for inference. Default is sQD2.
+
+**2) Inference**
+```
+./end-to-end/test.py
+```
+Specific parameters and options for the inference code are inside the ```settings``` ```dict``` in the file ```test.py```.
+
+### Training
+```
+./end-to-end/train.py
+```
+Specific parameters and options for the training code are inside the ```settings``` ```dict``` in the file ```train.py```.
+
 
 ---
 
